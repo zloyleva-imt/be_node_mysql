@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql": "github:mysqljs/mysql"
+    "mysql": "github:mysqljs/mysql",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.13.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"

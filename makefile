@@ -1,5 +1,5 @@
 start: # Starting project
-	@docker-compose up -d
+	@docker-compose up -d && npm start
 
 stop: # Stopping project
 	@docker-compose down
