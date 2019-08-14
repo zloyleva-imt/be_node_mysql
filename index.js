@@ -13,12 +13,6 @@ sequelize.authenticate()
     .then(() => console.log("was connected to db"))
     .catch(err => console.log("wasn't connected to db",err))
 
-const User = sequelize.define('users', {
-    name: Sequelize.STRING,
-    password: Sequelize.STRING
-});
-
-
 
 const bodyParser = require('body-parser')
 
