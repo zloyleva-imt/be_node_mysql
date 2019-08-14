@@ -18,32 +18,9 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.json());
 
-app.get('/users',(req, res) => {
-    console.log("Was detected req on GET '/'", req.query)
+const usersController = require('./controllers/UsersController');
 
-    User.findOne({where:{name:req.query.name}})
-    .then(result => {
-        
-        if(!result){
-            res.send({
-                data: "No user"
-            });
-        }
-        const {password, ...x} = result.dataValues;
-        console.log(">>>>",x)
-        res.send({
-            data: x
-        });
-    })
-    .catch(err => res.send({
-        data: err
-    }))
-    ;
-
-    // res.json({
-    //     data: 'Hello world +++'
-    // });
-})
+app.get('/users',usersController.users_index)
 
 app.post('/users',(req, res) => {
     console.log("Was detected req on POST '/'", req.body.name)
