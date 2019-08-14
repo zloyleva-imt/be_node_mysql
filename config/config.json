@@ -22,5 +22,10 @@
     "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
+  },
+  "app":{
+    "roles": [
+      "admin", "user", "author"
+    ]
   }
 }
